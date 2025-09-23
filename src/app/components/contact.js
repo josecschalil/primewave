@@ -123,7 +123,7 @@ const ContactMe = () => {
     "$10k - $25k",
     "$25k - $50k",
     "$50k+",
-    "Let's discuss",
+    "Let&apos;s discuss",
   ];
 
   // Timeline options
@@ -170,10 +170,10 @@ const ContactMe = () => {
 
   // Typing messages
   const typingMessages = [
-    "Let's build something amazing together! 🚀",
-    "I'm excited to hear about your project! 💡",
+    "Let&apos;s build something amazing together! 🚀",
+    "I&apos;m excited to hear about your project! 💡",
     "Ready to turn your ideas into reality! ⚡",
-    "Let's create digital magic! ✨",
+    "Let&apos;s create digital magic! ✨",
     "Your next great project starts here! 🎯",
   ];
 
@@ -385,7 +385,7 @@ const ContactMe = () => {
             Get In Touch
           </div>
           <h2 className="text-4xl md:text-6xl font-bold">
-            <span className="text-white">Let's Work </span>
+            <span className="text-white">Let&apos;s Work </span>
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               Together
             </span>
@@ -439,10 +439,10 @@ const ContactMe = () => {
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white">Get in touch</h3>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Ready to start your next project? I'm here to help bring your
-                ideas to life. Whether it's a simple website or a complex web
-                application, let's discuss how we can work together to create
-                something amazing.
+                Ready to start your next project? I&apos;m here to help bring
+                your ideas to life. Whether it&apos;s a simple website or a
+                complex web application, let&apos;s discuss how we can work
+                together to create something amazing.
               </p>
             </div>
 
@@ -742,8 +742,8 @@ const ContactMe = () => {
             <Coffee className="w-5 h-5 text-yellow-400" />
           </div>
           <p className="text-gray-500">
-            "The best projects start with a simple conversation. Let's have that
-            conversation."
+            "The best projects start with a simple conversation. Let&apos;s have
+            that conversation."
           </p>
         </div>
       </div>

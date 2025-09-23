@@ -249,7 +249,6 @@ const ProgrammerPortfolio = () => {
         }}
       />
 
-      {/* Main Navbar - MODIFIED: Removed 'fixed' and conditional styling */}
       <nav className={`relative z-50`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -388,7 +387,6 @@ const ProgrammerPortfolio = () => {
         </div>
       </nav>
 
-      {/* Hero Section - MODIFIED: Removed top padding 'pt-20' */}
       <section className="relative min-h-screen flex items-center justify-center z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -406,7 +404,7 @@ const ProgrammerPortfolio = () => {
             {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="text-white">I'm a</span>
+                <span className="text-white">I&apos;m a</span>
                 <br />
                 <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   {typedText}
