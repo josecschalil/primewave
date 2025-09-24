@@ -34,11 +34,11 @@ const AboutMeSection = () => {
   // --- DATA (Consolidated) ---
 
   const quotes = [
-    `Code is poetry written in logic.`,
-    `Every bug is a learning opportunity in disguise.`,
-    `Clean code is not written by following a set of rules. Its written by someone who cares.`,
-    `The best error message is the one that never shows up.`,
-    `Simplicity is the ultimate sophistication in programming.`,
+    "Code is poetry written in logic.",
+    "Every bug is a learning opportunity in disguise.",
+    "Clean code is not written by following a set of rules. It's written by someone who cares.",
+    "The best error message is the one that never shows up.",
+    "Simplicity is the ultimate sophistication in programming.",
   ];
 
   const skillsData = [
