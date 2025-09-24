@@ -36,7 +36,7 @@ const AboutMeSection = () => {
   const quotes = [
     `Code is poetry written in logic.`,
     `Every bug is a learning opportunity in disguise.`,
-    `Clean code is not written by following a set of rules. It&apos;s written by someone who cares.`,
+    `Clean code is not written by following a set of rules. Its written by someone who cares.`,
     `The best error message is the one that never shows up.`,
     `Simplicity is the ultimate sophistication in programming.`,
   ];
@@ -534,8 +534,8 @@ const AboutMeSection = () => {
                   </p>
                   <p>
                     I write clean code, stay updated on trends, and contribute
-                    to open source. Let&apos;s connect and build something
-                    amazing together.
+                    to open source. Lets connect and build something amazing
+                    together.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
