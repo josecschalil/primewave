@@ -104,42 +104,56 @@ const ProgrammerPortfolio = () => {
       }
     }
   }, [typedText, isTyping, currentTextIndex]);
-
-  // Animated code lines
+  // Animated code lines - REVISED AND CORRECTED
   useEffect(() => {
-    let lineIndex = 0;
-    const interval = setInterval(() => {
+    // Use a ref to store timeout IDs so we can clear them on unmount
+    const timers = [];
+    let isMounted = true; // Flag to check if component is still mounted
+
+    const animate = (lineIndex = 0) => {
+      if (!isMounted) return;
+
+      // Condition to add the next line
       if (lineIndex < codeSnippets.length) {
-        setCodeLines((prev) => [
-          ...prev,
-          {
-            id: `${lineIndex}-${Math.random()}`,
-            text: codeSnippets[lineIndex],
-            opacity: 0,
-          },
-        ]);
+        const addLineTimer = setTimeout(() => {
+          setCodeLines((prev) => [
+            ...prev,
+            { id: lineIndex, text: codeSnippets[lineIndex], opacity: 0 },
+          ]);
 
-        // Fade in the line
-        setTimeout(() => {
-          setCodeLines((prev) =>
-            prev.map((line) =>
-              line.id === lineIndex ? { ...line, opacity: 1 } : line
-            )
-          );
-        }, 100);
+          // Fade in the newly added line
+          const fadeInTimer = setTimeout(() => {
+            setCodeLines((prev) =>
+              prev.map((line) =>
+                line.id === lineIndex ? { ...line, opacity: 1 } : line
+              )
+            );
+          }, 100);
+          timers.push(fadeInTimer);
 
-        lineIndex++;
+          // Schedule the next line animation
+          animate(lineIndex + 1);
+        }, 800); // Delay between lines
+        timers.push(addLineTimer);
       } else {
-        // Reset after showing all lines
-        setTimeout(() => {
-          setCodeLines([]);
-          lineIndex = 0;
-        }, 3000);
+        // All lines have been shown, schedule a reset
+        const resetTimer = setTimeout(() => {
+          setCodeLines([]); // Clear the lines
+          animate(0); // Restart the animation
+        }, 3000); // Pause before resetting
+        timers.push(resetTimer);
       }
-    }, 800);
+    };
 
-    return () => clearInterval(interval);
-  }, []);
+    // Start the animation
+    animate();
+
+    // Cleanup function to clear all scheduled timeouts when the component unmounts
+    return () => {
+      isMounted = false;
+      timers.forEach(clearTimeout);
+    };
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   // Matrix effect on canvas
   useEffect(() => {
@@ -490,7 +504,7 @@ const ProgrammerPortfolio = () => {
                 </div>
                 <div className="ml-8 text-gray-300">
                   <span className="text-red-400">this</span>.name ={" "}
-                  <span className="text-yellow-400">"Your Name"</span>;
+                  <span className="text-yellow-400">Jose C S</span>;
                 </div>
                 <div className="ml-8 text-gray-300">
                   <span className="text-red-400">this</span>.title ={" "}

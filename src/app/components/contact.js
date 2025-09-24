@@ -493,7 +493,7 @@ const ContactMe = () => {
                   </span>
                 </div>
               </div>
-              <p className="text-gray-400 mb-4">
+              <p className="text-gray-400 mb-4" suppressHydrationWarning>
                 Currently accepting new projects for Q2 2024. Local time:{" "}
                 {currentTime.toLocaleTimeString()}
               </p>
@@ -597,7 +597,7 @@ const ContactMe = () => {
                       ? "border-emerald-500 ring-1 ring-emerald-500/50 bg-gray-700/80"
                       : "border-gray-600 focus:border-emerald-500/50"
                   }`}
-                  placeholder="What's this about?"
+                  placeholder="Whats this about?"
                 />
               </div>
 
@@ -709,7 +709,7 @@ const ContactMe = () => {
                 <div className="flex items-center space-x-3 bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-4 text-emerald-400 animate-fadeIn">
                   <CheckCircle className="w-5 h-5" />
                   <span>
-                    Message sent successfully! I'll get back to you soon.
+                    Message sent successfully! I&apos;ll get back to you soon.
                   </span>
                 </div>
               )}
