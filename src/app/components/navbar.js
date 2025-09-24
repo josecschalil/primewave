@@ -48,7 +48,6 @@ const ProgrammerPortfolio = () => {
     "return innovation.build();",
   ];
 
-  // Generate floating particles
   useEffect(() => {
     const newParticles = Array.from({ length: 50 }, (_, i) => ({
       id: i,
@@ -62,7 +61,6 @@ const ProgrammerPortfolio = () => {
     setParticles(newParticles);
   }, []);
 
-  // Animate particles
   useEffect(() => {
     const interval = setInterval(() => {
       setParticles((prev) =>
@@ -79,7 +77,6 @@ const ProgrammerPortfolio = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Typewriter effect
   useEffect(() => {
     const currentText = texts[currentTextIndex];
 
@@ -105,16 +102,13 @@ const ProgrammerPortfolio = () => {
       }
     }
   }, [typedText, isTyping, currentTextIndex]);
-  // Animated code lines - REVISED AND CORRECTED
   useEffect(() => {
-    // Use a ref to store timeout IDs so we can clear them on unmount
     const timers = [];
-    let isMounted = true; // Flag to check if component is still mounted
+    let isMounted = true;
 
     const animate = (lineIndex = 0) => {
       if (!isMounted) return;
 
-      // Condition to add the next line
       if (lineIndex < codeSnippets.length) {
         const addLineTimer = setTimeout(() => {
           setCodeLines((prev) => [
@@ -122,7 +116,6 @@ const ProgrammerPortfolio = () => {
             { id: lineIndex, text: codeSnippets[lineIndex], opacity: 0 },
           ]);
 
-          // Fade in the newly added line
           const fadeInTimer = setTimeout(() => {
             setCodeLines((prev) =>
               prev.map((line) =>
@@ -132,31 +125,26 @@ const ProgrammerPortfolio = () => {
           }, 100);
           timers.push(fadeInTimer);
 
-          // Schedule the next line animation
           animate(lineIndex + 1);
-        }, 800); // Delay between lines
+        }, 800);
         timers.push(addLineTimer);
       } else {
-        // All lines have been shown, schedule a reset
         const resetTimer = setTimeout(() => {
-          setCodeLines([]); // Clear the lines
-          animate(0); // Restart the animation
-        }, 3000); // Pause before resetting
+          setCodeLines([]);
+          animate(0);
+        }, 3000);
         timers.push(resetTimer);
       }
     };
 
-    // Start the animation
     animate();
 
-    // Cleanup function to clear all scheduled timeouts when the component unmounts
     return () => {
       isMounted = false;
       timers.forEach(clearTimeout);
     };
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []);
 
-  // Matrix effect on canvas
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -495,28 +483,32 @@ const ProgrammerPortfolio = () => {
               {/* Code Content */}
               <div className="p-6 font-mono text-sm space-y-2 min-h-[400px]">
                 <div className="text-gray-500">
-                  // Welcome to my digital workspace
+                  {"// Welcome to my digital workspace"}
                 </div>
                 <div className="text-emerald-400">
-                  <span className="text-purple-400">class</span> Developer {"{"}
+                  <span className="text-purple-400">{"class"}</span>{" "}
+                  {"Developer"} {"{"}
                 </div>
                 <div className="ml-4 text-cyan-400">
-                  <span className="text-purple-400">constructor</span>() {"{"}
+                  <span className="text-purple-400">{"constructor"}</span>(){" "}
+                  {"{"}
                 </div>
                 <div className="ml-8 text-gray-300">
-                  <span className="text-red-400">this</span>.name ={" "}
-                  <span className="text-yellow-400">Jose C S</span>;
+                  <span className="text-red-400">{"this"}</span>
+                  {".name ="} <span className="text-yellow-400">Jose C S</span>;
                 </div>
                 <div className="ml-8 text-gray-300">
-                  <span className="text-red-400">this</span>.title ={" "}
+                  <span className="text-red-400">{"this"}</span>
+                  {".title ="}{" "}
                   <span className="text-yellow-400">"{typedText}"</span>;
                 </div>
                 <div className="ml-8 text-gray-300">
-                  <span className="text-red-400">this</span>.passion ={" "}
+                  <span className="text-red-400">{"this"}</span>
+                  {".passion ="}{" "}
                   <span className="text-yellow-400">
-                    "Building Amazing Things"
+                    {"Building Amazing Things"}
                   </span>
-                  ;
+                  {" ;"}
                 </div>
                 <div className="ml-4 text-cyan-400">{"}"}</div>
 
@@ -535,9 +527,6 @@ const ProgrammerPortfolio = () => {
                 </div>
 
                 <div className="text-emerald-400 pt-4">{"}"}</div>
-                <div className="text-gray-500 pt-4">
-                  <span className="animate-pulse">▋</span>
-                </div>
               </div>
             </div>
 
