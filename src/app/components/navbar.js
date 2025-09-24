@@ -328,11 +328,11 @@ const ProgrammerPortfolio = () => {
                 })}
               </div>
 
-              <button className="relative group bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-6 py-2 rounded-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105">
+              <button className="relative group bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-5 py-3 rounded-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <span className="relative flex items-center space-x-2">
+                <span className="relative flex flex-nowrap items-center space-x-2">
                   <Zap className="w-4 h-4" />
-                  <span>Hire Me</span>
+                  <span className="whitespace-nowrap">Hire Me</span>
                 </span>
               </button>
             </div>
@@ -540,7 +540,7 @@ const ProgrammerPortfolio = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-[-70] left-1/2 transform -translate-x-1/2 ">
           <div className="flex flex-col items-center space-y-2 animate-bounce">
             <span className="text-gray-400 text-sm font-mono">
               Scroll to explore

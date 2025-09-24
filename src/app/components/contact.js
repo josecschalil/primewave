@@ -171,11 +171,11 @@ const ContactMe = () => {
 
   // Typing messages
   const typingMessages = [
-    "Let&apos;s build something amazing together! 🚀",
-    "I&apos;m excited to hear about your project! 💡",
-    "Ready to turn your ideas into reality! ⚡",
-    "Let&apos;s create digital magic! ✨",
-    "Your next great project starts here! 🎯",
+    "Let's build something amazing together!",
+    "I'm excited to hear about your project!",
+    "Ready to turn your ideas into reality! ",
+    "Let's create digital magic! ",
+    "Your next great project starts here! ",
   ];
 
   // Generate particles
@@ -271,7 +271,7 @@ const ContactMe = () => {
     };
 
     typeMessage();
-  }, [currentMessageIndex]);
+  }, []);
 
   // Mouse tracking
   const handleMouseMove = (e) => {
