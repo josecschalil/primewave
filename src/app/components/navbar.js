@@ -520,7 +520,7 @@ const ProgrammerPortfolio = () => {
                       className="text-emerald-400 transition-opacity duration-500"
                       style={{ opacity: line.opacity }}
                     >
-                      <span className="text-gray-500"> // </span>
+                      <span className="text-gray-500"> {"//"} </span>
                       {line.text}
                     </div>
                   ))}
