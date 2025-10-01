@@ -34,75 +34,85 @@ export default function ContactForm() {
           </p>
         </div>
 
-        <div className="space-y-6">
-          <div className="flex flex-col md:flex-row md:items-center border-t border-gray-200 pt-2">
-            <label className="text-sm font-medium text-gray-900 md:w-1/2 mb-2 md:mb-0">
-              TOPIC
+        <div>
+          <div className="border-t border-gray-300 pt-2 pb-8 flex flex-col md:flex-row justify-between w-full">
+            <label className="block uppercase font-medium md:w-1/2 text-black">
+              Topic
             </label>
-            <input
-              type="text"
-              name="topic"
-              value={formData.topic}
-              onChange={handleChange}
-              placeholder="ENTER TOPIC"
-              className="md:w-1/2 px-4 py-5 text-gray-600 placeholder-gray-300 border-0 focus:outline-none focus:ring-0 text-xl"
-            />
+            <div className="md:w-1/2">
+              <input
+                type="text"
+                name="topic"
+                value={formData.topic}
+                onChange={handleChange}
+                placeholder="ENTER TOPIC"
+                className="w-full text-lg sm:text-2xl md:text-3xl text-black placeholder-gray-400 bg-transparent text-right md:text-left border-0 focus:outline-none focus:ring-0"
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-center border-t border-gray-200 pt-2">
-            <label className="text-sm font-medium text-gray-900 md:w-1/2 mb-2 md:mb-0">
-              NAME
+          <div className="border-t border-gray-300 pt-2 pb-8 flex flex-col md:flex-row justify-between w-full">
+            <label className="block uppercase font-medium md:w-1/2 text-black">
+              Name
             </label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="FULL NAME"
-              className="md:w-1/2 px-4 py-5 text-gray-600 placeholder-gray-300 border-0 focus:outline-none focus:ring-0 text-xl"
-            />
+            <div className="md:w-1/2">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="FULL NAME"
+                className="w-full text-lg sm:text-2xl md:text-3xl text-black placeholder-gray-400 bg-transparent text-right md:text-left border-0 focus:outline-none focus:ring-0"
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-center border-t border-gray-200 pt-2">
-            <label className="text-sm font-medium text-gray-900 md:w-1/2 mb-2 md:mb-0">
-              EMAIL
+          <div className="border-t border-gray-300 pt-2 pb-8 flex flex-col md:flex-row justify-between w-full">
+            <label className="block uppercase font-medium md:w-1/2 text-black">
+              Email
             </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="yourname@example.com"
-              className="md:w-1/2 px-4 py-5 text-gray-600 placeholder-gray-300 border-0 focus:outline-none focus:ring-0 text-xl"
-            />
+            <div className="md:w-1/2">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="yourname@example.com"
+                className="w-full text-lg sm:text-2xl md:text-3xl text-black placeholder-gray-400 bg-transparent text-right md:text-left border-0 focus:outline-none focus:ring-0"
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-center border-t border-gray-200 pt-2">
-            <label className="text-sm font-medium text-gray-900 md:w-1/2 mb-2 md:mb-0">
-              PHONE
+          <div className="border-t border-gray-300 pt-2 pb-8 flex flex-col md:flex-row justify-between w-full">
+            <label className="block uppercase font-medium md:w-1/2 text-black">
+              Phone
             </label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="+91 00000 00000"
-              className="md:w-1/2 px-4 py-5 text-gray-600 placeholder-gray-300 border-0 focus:outline-none focus:ring-0 text-xl"
-            />
+            <div className="md:w-1/2">
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="+91 00000 00000"
+                className="w-full text-lg sm:text-2xl md:text-3xl text-black placeholder-gray-400 bg-transparent text-right md:text-left border-0 focus:outline-none focus:ring-0"
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-start border-t border-gray-200 pt-2">
-            <label className="text-sm font-medium text-gray-900 md:w-1/2 mb-2 md:mb-0 md:pt-1">
-              QUERY
+          <div className="border-t border-gray-300 pt-2 pb-8 flex flex-col md:flex-row justify-between w-full">
+            <label className="block uppercase font-medium md:w-1/2 text-black">
+              Query
             </label>
-            <textarea
-              name="query"
-              value={formData.query}
-              onChange={handleChange}
-              placeholder="ENTER DETAILS"
-              rows="6"
-              className="md:w-1/2 px-4 py-5 text-gray-600 placeholder-gray-300 border-0 focus:outline-none focus:ring-0 text-xl resize-none"
-            />
+            <div className="md:w-1/2">
+              <textarea
+                name="query"
+                value={formData.query}
+                onChange={handleChange}
+                placeholder="ENTER DETAILS"
+                rows="4"
+                className="w-full text-lg sm:text-2xl md:text-3xl text-black placeholder-gray-400 bg-transparent text-right md:text-left border-0 focus:outline-none focus:ring-0 resize-none"
+              />
+            </div>
           </div>
 
           <div className="flex justify-end pt-8">
